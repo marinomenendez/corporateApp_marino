@@ -17,13 +17,11 @@
   </ion-header>
 
   <ion-item>
-    <ion-input [(ngModel)]="correo" placeholder="Correo">
+    <ion-input name="correo" [(ngModel)]="correo" placeholder="Correo">
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-textarea>
-      [(ngModel)]="mensaje">
-    </ion-textarea>
+    <ion-textarea name="mensaje" [(ngModel)]="mensaje"/>
   </ion-item>
   <ion-button (click)="enviar()">
     Enviar
