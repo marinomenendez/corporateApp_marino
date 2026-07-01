@@ -5,7 +5,7 @@
     <ion-buttons slot="end">
       <ion-back-button default-href="#" title="Back to home"></ion-back-button>
     </ion-buttons>
-    <!-- <ion-title>Back to home</ion-title> -->
+
   </ion-toolbar>
 
 </ion-header>
@@ -24,6 +24,7 @@
       <ion-col>Unidades</ion-col>
       <ion-col>Precio</ion-col>
       <ion-col>Foto</ion-col>
+      <ion-col>Disponible</ion-col>
     </ion-row>
     <ion-row *ngFor="let product of products">
       <ion-col>{{product.id}}</ion-col>
@@ -33,6 +34,7 @@
       <ion-col>
         <img [src]="product.foto" width="80">
       </ion-col>
+      <ion-col>{{product.disponible ? "Sí" : "No"}}</ion-col>
     </ion-row>
   </ion-grid>
 

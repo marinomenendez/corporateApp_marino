@@ -4,20 +4,23 @@
     "nombre": "Portátil Dell",
     "unidades": 12,
     "precio": 1200,
-    "foto": "assets/images/dell.jpeg"
+    "foto": "assets/images/dell.jpeg",
+    "disponible": true
   },
   {
     "id": 2,
     "nombre": "Monitor LG",
     "unidades": 8,
     "precio": 299,
-    "foto": "assets/images/lg.jpeg"
+    "foto": "assets/images/lg.jpeg",
+    "disponible": true
   },
   {
     "id": 3,
     "nombre": "Redmi",
     "unidades": 2,
     "precio": 199,
-    "foto": "assets/images/redmi.jpeg"
+    "foto": "assets/images/redmi.jpeg",
+    "disponible": false
   }
 ]
