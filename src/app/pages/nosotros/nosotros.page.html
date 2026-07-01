@@ -15,4 +15,18 @@
       <ion-title size="large">nosotros</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+  <h2>Cálculo de distancia</h2>
+  <h3>Ubicación de las oficinas</h3>
+
+  <p>Latitud: 50</p>
+  <p>Longitud: -5</p>
+  <p *ngIf="actualLat">Latitud actual: {{actualLat}}</p>
+  <p *ngIf="actualLon">Longitud actual: {{actualLon}}</p>
+  <p *ngIf="distancia">Distancia a nuestras oficinas: {{distancia}}</p>
+
+  <ion-button (click)="verUbicacion()">Ver ubicación</ion-button>
+  <ion-button (click)="calcularDistancia()">Calcular distancia</ion-button>
+
 </ion-content>
