@@ -1,0 +1,7 @@
+{
+  "name": "corporateApp_marino",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
