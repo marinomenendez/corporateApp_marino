@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonBackButton, IonButtons, IonButton, IonItem, IonTextarea, IonInput } from '@ionic/angular/standalone';
 import { Preferences } from '@capacitor/preferences';
+import { Messages } from 'src/app/services/messages';
 
 @Component({
   selector: 'app-contacto',
@@ -17,9 +18,21 @@ export class ContactoPage implements OnInit {
   mensaje:string = "";
   enviado = false;
 
-  constructor() { }
+  constructor(private servicio: Messages) { }
 
   ngOnInit() {
+  }
+
+  guardar() {
+    this.servicio.guardarMensaje(this.correo, this.mensaje);
+  }
+
+  leer() {
+    this.servicio.leerMensaje();
+  }
+
+  consultar() {
+    this.servicio.consultarPlataforma();
   }
 
   async enviar() {
@@ -35,6 +48,8 @@ export class ContactoPage implements OnInit {
 
     console.log("Datos enviados: ");
     console.log((await Preferences.get({key:'ultimoMensaje'})).value);
+
+    this.servicio.guardarMensaje(this.correo, this.mensaje);
   }
 
 
